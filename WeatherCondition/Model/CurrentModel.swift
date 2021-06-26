@@ -9,20 +9,20 @@ import Foundation
 
 struct CurrentModel: Codable {
     
-    var dt: Double?
-    var sunrise: Double?
-    var sunset: Double?
-    var temp: Float?
-    var feelsLike: Float?
-    var pressure: Double?
-    var humidity: Int?
-    var dewPoint: Float?
-    var uvi: Int?
-    var clouds: Int?
-    var visisbility: Double?
-    var windSpeed: Int?
-    var windDeg: Int?
-    var weather: [Weather]
+    var dt: Double
+    var sunrise: Double
+    var sunset: Double
+    var temp: Float
+    var feelsLike: Float
+    var pressure: Double
+    var humidity: Int
+    var dewPoint: Float
+    var uvi: Float
+    var clouds: Int
+    var visibility: Int
+    var windSpeed: Float
+    var windDeg: Int
+    var weather: [Weathers]
     
     enum CodingKeys : String, CodingKey {
         case dt
@@ -35,17 +35,17 @@ struct CurrentModel: Codable {
         case dewPoint = "dew_point"
         case uvi
         case clouds
-        case visisbility
+        case visibility
         case windSpeed = "wind_speed"
         case windDeg = "wind_deg"
         case weather
     }
 }
 
-struct Weather: Codable {
+struct Weathers: Codable {
     
-    var id: Int?
-    var main: String?
-    var description: String?
-    var icon: String?
+    var id: Int
+    var main: String
+    var description: String
+    var icon: String
 }

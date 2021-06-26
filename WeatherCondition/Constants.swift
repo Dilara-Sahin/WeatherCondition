@@ -7,9 +7,11 @@
 
 import Foundation
 
-struct Constants {
+
+class Constants : Codable {
     
-    static let baseURL = "http://api.openweathermap.org/data/2.5/onecall"
-    static let iconURL = "http://openweathermap.org/img/wn/" + "\(Weather().icon)" + "@2x.png"
-    
+    static let baseURL : String = "https://api.openweathermap.org/data/2.5/onecall?"
+    static let iconURL : String = "http://openweathermap.org/img/wn/"
+   
 }
+
